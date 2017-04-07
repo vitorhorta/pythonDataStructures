@@ -1,6 +1,5 @@
 from queue.Queue import Queue
 
-
 def defaultTraverseAction(x):
     print(x)
 
@@ -22,6 +21,9 @@ class BinarySearchTree:
     def getItem(self, value):
         if self._root == value:
             return True
+
+        if self._root == None:
+            return self
 
         if self._root > value and self._left != None:
             return self._left.getItem(value)

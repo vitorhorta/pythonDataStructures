@@ -1,5 +1,6 @@
 import unittest
-from BinarySearchTree import BinarySearchTree
+from BinarySearchTree.BinarySearchTree import BinarySearchTree
+
 class TestTree(unittest.TestCase):
     def setUp(self):
         self.tree = BinarySearchTree()
@@ -21,18 +22,14 @@ class TestTree(unittest.TestCase):
     def testPreOrderTraversal(self):
         expectedArray = [3,2,1,7,6,9]
         self.tree.preOrderTraversal(self.compareValues)
-        self.assertEquals(self.resultedArray,expectedArray)
+        self.assertEqual(self.resultedArray,expectedArray)
 
     def testInOrderTraversal(self):
         expectedArray = [1,2,3,6,7,9]
         self.tree.inOrderTraversal(self.compareValues)
-        self.assertEquals(self.resultedArray,expectedArray)
+        self.assertEqual(self.resultedArray,expectedArray)
 
     def testPostOrderTraversal(self):
         expectedArray = [1,2,3,6,7,9]
         self.tree.inOrderTraversal(self.compareValues)
-        self.assertEquals(self.resultedArray,expectedArray)
-
-
-if __name__ == '__main__':
-    unittest.main()
+        self.assertEqual(self.resultedArray,expectedArray)
