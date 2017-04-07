@@ -54,16 +54,10 @@ class BinarySearchTree:
         root = self
         queue.push(root)
         while(root != None and queue.size > 0):
-            print(queue)
             root = queue.remove()
             action(root._root)
             if root._left._root  != None: queue.push(root._left)
             if root._right._root != None: queue.push(root._right)
-
-
-
-
-
 
     def __repr__(self):
         return str(self._root)
