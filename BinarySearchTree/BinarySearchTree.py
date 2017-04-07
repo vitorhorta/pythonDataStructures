@@ -1,3 +1,6 @@
+from stack.Stack import Stack
+
+
 def defaultTraverseAction(x):
     print(x)
 
