@@ -1,4 +1,4 @@
-from stack.Stack import Stack
+from queue.Queue import Queue
 
 
 def defaultTraverseAction(x):
@@ -48,6 +48,21 @@ class BinarySearchTree:
             self._left.postOrderTraversal(action)
             self._right.postOrderTraversal(action)
             action(self._root)
+
+    def breadthFirstTraversal(self, action = defaultTraverseAction):
+        queue = Queue()
+        root = self
+        queue.push(root)
+        while(root != None and queue.size > 0):
+            print(queue)
+            root = queue.remove()
+            action(root._root)
+            if root._left._root  != None: queue.push(root._left)
+            if root._right._root != None: queue.push(root._right)
+
+
+
+
 
 
     def __repr__(self):

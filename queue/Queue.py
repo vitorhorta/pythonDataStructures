@@ -33,6 +33,7 @@ class Queue:
         self.head = self.head.next
         if(self.head == None):
             self.tail = None
+        self.size = self.size - 1
         return value
 
     def printRemoving(self):

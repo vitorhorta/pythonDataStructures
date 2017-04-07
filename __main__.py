@@ -11,4 +11,5 @@ tree.addItem(6)
 
 # tree.preOrderTraversal()
 # tree.inOrderTraversal()
-tree.postOrderTraversal()
+# tree.postOrderTraversal()
+tree.breadthFirstTraversal()
