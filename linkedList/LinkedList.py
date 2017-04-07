@@ -16,6 +16,14 @@ class LinkedList:
             node = node.next
         return str(nodes)
 
+    def getItem(self,value):
+        node = self.head
+        while (node != None):
+            if(node.value == value):
+                return node.value
+            node = node.next
+        return False
+
     def remove(self,position):
         value = self.head.value
         self.head = self.head.next
